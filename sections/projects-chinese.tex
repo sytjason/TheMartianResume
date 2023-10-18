@@ -1,0 +1,52 @@
+\section{Projects and Experience}
+
+% entry type must contain 4 arguments or it will FAIL
+\entry{Master thesis}
+{\begin{CJK*}{UTF8}{bsmi}以遠端記憶體優化虛擬記憶體及檔案系統快取\end{CJK*}}
+{}
+{}
+
+\begin{itemize}
+		\setlength\topsep{0em}
+		\setlength\parskip{0em}
+		\setlength\parsep{0em}
+		\setlength\itemsep{0em}
+    \item\begin{CJK*}{UTF8}{bsmi}使用 mpstat, Perf, Flamegraph 進行效能測量\end{CJK*} 
+    \item\begin{CJK*}{UTF8}{bsmi}透過 bcache 及 RDMA remote ramdisk 增加 I/O 效能\end{CJK*} 
+    \item\begin{CJK*}{UTF8}{bsmi}使用 fio micro-benchmark 及實際運行基因分析工具(bigsnpr)分析基因變異與疾病的相關性工作以測試讀寫速度\end{CJK*} 
+    \item\begin{CJK*}{UTF8}{bsmi}在 micro-benchmark 讀取方面達到3.5倍的加速\end{CJK*} 
+    \item\begin{CJK*}{UTF8}{bsmi}在基因分析工作方面獲得了2倍的加速\end{CJK*} 
+\end{itemize}
+
+\entry{MIT 6.S081 (Introduction to Operating Systems)\begin{CJK*}{UTF8}{bsmi}自主學習\end{CJK*}}
+{\begin{CJK*}{UTF8}{bsmi}透過實際修改XV6的程式碼來學習OS的基本概念\end{CJK*}} {} {}
+\begin{itemize}
+\setlength\topsep{-0.1em}
+\setlength\parskip{-0.1em}
+\setlength\parsep{-0.1em}
+\setlength\itemsep{-0.1em}
+  \item\begin{CJK*}{UTF8}{bsmi}修改 kernel pagetable, 新增 user virtual address mapping 到 kernel pagetable 當中\end{CJK*}  
+  \item\begin{CJK*}{UTF8}{bsmi}實做 lazy allocation 功能，當page fault發生時系統核心才會分配且更新映射記憶體空間\end{CJK*} 
+  \item\begin{CJK*}{UTF8}{bsmi}實做copy-on-write fork，使parent與child起初分享同樣的實體記憶體空間，當store page fault 發生在 copy-on-write page 時系統才會複製parent的記憶體到新配置的記憶體\end{CJK*} 
+  \item\begin{CJK*}{UTF8}{bsmi}更改 inode 增加最大可允許的檔案大小\end{CJK*}
+  \item\begin{CJK*}{UTF8}{bsmi}增加symbolic link的功能\end{CJK*}
+  \item\begin{CJK*}{UTF8}{bsmi}實做簡單的 mmap 功能，使用者可將記憶體直接映射到檔案當中\end{CJK*}
+  \item\begin{CJK*}{UTF8}{bsmi}操作網卡硬體的暫存器，傳送或接收封包\end{CJK*}
+  \item\begin{CJK*}{UTF8}{bsmi}以C作為程式語言, 用 gdb 來 debug\end{CJK*}
+\end{itemize}
+
+%\entry{Added new functionality in SOFA project}
+%{SOFA: A Cross-framework Performance Profiler}
+%{Sep 2018 - Oct 2018}
+%{}
+
+%\begin{itemize}
+		%\setlength\topsep{0em}
+		%\setlength\parskip{0em}
+		%\setlength\parsep{0em}
+		%\setlength\itemsep{0em}
+	%\item Added disk I/O r/w bandwidth output
+	%\item Parsed the output from system log file with Python
+%\end{itemize}
+
+

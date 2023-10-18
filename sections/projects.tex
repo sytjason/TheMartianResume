@@ -1,0 +1,51 @@
+\section{Projects and Experience}
+
+% entry type must contain 4 arguments or it will FAIL
+\entry{Master thesis}
+{Enhancing Virtual Memory and Filesystem Cache with Remote Memories}
+{}
+{}
+
+\begin{itemize}
+		\setlength\topsep{0em}
+		\setlength\parskip{0em}
+		\setlength\parsep{0em}
+		\setlength\itemsep{0em}
+	\item Performance profiling using mpstat, Perf and Flamegraph
+	\item Improved I/O performance via bcache and RDMA remote ramdisk
+  \item Conducted simple read/write fio micro-benchmark and a real world genomic analysis tool (bigsnpr) workload 
+	\item Achieved ~3.5x speedup on read test and 2x speedup on real-world genomic analysis test against traditional method 
+\end{itemize}
+
+\entry{MIT 6.S081 (Introduction to Operating Systems) self study}
+{Learn basics of OS by getting hands on XV6, a simple teaching OS that runs on RISC-V machine simulated by QEMU} {} {}
+\begin{itemize}
+\setlength\topsep{-0.1em}
+\setlength\parskip{-0.1em}
+\setlength\parsep{-0.1em}
+\setlength\itemsep{-0.1em}
+  \item Add kernel pagetable per process to allow user va mapping in kernel mode  
+  \item Implement lazy allocation functionality that the kernel only allocates and maps a new physical page when a page fault happens in lazily allocated address
+  \item Enable copy-on-write fork that the child uses the same mapping as the parent, and then copy and write to a new page when a store page fault occurs in a copy-on-write page
+  \item Manipulate inode structure to enable larger file size
+  \item Add symbolic link support so that the kernel refers file target by pathname instead of inode
+  \item Implement mmap that enables memory-mapping to a file
+  \item Manipulate network interface card hardware control registers to transmit/receive packets 
+  \item Written in C, debugged on gdb
+\end{itemize}
+
+%\entry{Added new functionality in SOFA project}
+%{SOFA: A Cross-framework Performance Profiler}
+%{Sep 2018 - Oct 2018}
+%{}
+
+%\begin{itemize}
+		%\setlength\topsep{0em}
+		%\setlength\parskip{0em}
+		%\setlength\parsep{0em}
+		%\setlength\itemsep{0em}
+	%\item Added disk I/O r/w bandwidth output
+	%\item Parsed the output from system log file with Python
+%\end{itemize}
+
+
