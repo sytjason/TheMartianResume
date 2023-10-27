@@ -59,7 +59,7 @@
 \newcommand{\mobileSymbol}{\faMobilePhone}
 \newcommand{\githubSymbol}{\faGithub}
 \newcommand\link[2]{\href{#1}{#2}}
-\newcommand\user[3]{{\LARGE #1 \textbf{#2} \LARGE #3}}
+\newcommand\user[3]{{\Huge #1 \textbf{#2} \Huge #3}}
 \newcommand{\socialtext}[2]{\mbox{{#1}\hspace{0.5em}#2\hspace{1em}}}
 \newcommand{\sociallink}[3]{\mbox{{#1}\hspace{0.5em}\link{#2}{#3}\hspace{1em}}}
 \newcommand*{\name}[3]{\def\@firstname{#1}\def\@lastname{#2}\def\@chinesename{#3}}
@@ -148,51 +148,42 @@
 
 % 
 \newcommand*{\makecvheader}{
-	\ifundef{\@alternative}{
-		\ifundef{\@photodiameter}{
-			\begin{minipage}{\linewidth}    	      	
-		}{
-			\begin{minipage}{\dimexpr\linewidth-\@photodiameter-2em}        	
-		}
-		\user{\@firstname}{\@lastname}{\@chinesename} \vspace*{0.3cm}\\				 	
-				\small{\@socialinfo}
-			\end{minipage}  
-		\ifdef{\@photodiameter}{
-			\begin{minipage}{\@photodiameter}
-				\begin{tikzpicture}%
-				\node[circle, text=white, minimum size=2.5cm,
-				path picture={\node at (path picture bounding box.center){
-						\includegraphics[width=2.5cm]{\@photo}
-					};
-				}]{ };
-				\end{tikzpicture}				
-			\end{minipage}
-		}{}
-	    \resumetitle{\@tagline}
-	}{
-	    \ifundef{\@photodiameter}{
-			\begin{minipage}{\linewidth}     	
-	    }{
-			\begin{minipage} {\dimexpr\linewidth-\@photodiameter-2em}    	
-	    }
-		\user{\@firstname}{\@lastname} {\@chinesename} \vspace*{0.3cm}\\
-				\resumetitle{\@tagline}
-				\smallskip\\
-				\small{\@socialinfo}
-			\end{minipage}  	    
-		\ifdef{\@photodiameter}{
-			\begin{minipage}{\@photodiameter}
-				\begin{tikzpicture}%
-				\node[text=white, minimum width=2.8cm, minimum height=2.8cm, %minimum size=2.8cm,
-				path picture={\node at (path picture bounding box.center){
-						\includegraphics[width=2.5cm]{\@photo}
-					};
-				}]{ };
-				\end{tikzpicture}			
-			\end{minipage} 			
-		}{}
-		\bigskip
-	}
+  \ifundef{\@alternative}{
+    \ifundef{\@photodiameter}{
+      % \begin{minipage}{\linewidth}    	      	
+      }{
+        \begin{minipage}{\dimexpr\linewidth-\@photodiameter-2em}        	
+        }
+        \begin{center}
+          \user{\@firstname}{\@lastname}{\@chinesename} \vspace*{0.3cm}\\
+          \small{\@socialinfo}
+        \end{center}
+        % \end{minipage}
+        % \resumetitle{\@tagline}
+      }{
+        \ifundef{\@photodiameter}{
+          \begin{minipage}{\linewidth}     	
+        }{
+          \begin{minipage} {\dimexpr\linewidth-\@photodiameter-2em}    	
+        }
+        \user{\@firstname}{\@lastname} {\@chinesename} \vspace*{0.3cm}\\
+        \resumetitle{\@tagline}
+        \smallskip\\
+        \small{\@socialinfo}
+        \end{minipage}  	    
+        \ifdef{\@photodiameter}{
+          \begin{minipage}{\@photodiameter}
+            \begin{tikzpicture}%
+              \node[text=white, minimum width=2.8cm, minimum height=2.8cm, %minimum size=2.8cm,
+              path picture={\node at (path picture bounding box.center){
+                \includegraphics[width=2.5cm]{\@photo}
+              };
+              }]{ };
+            \end{tikzpicture}			
+          \end{minipage} 			
+        }{}
+        \bigskip
+      }
 }
 
 
