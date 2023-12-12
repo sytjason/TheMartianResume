@@ -75,6 +75,7 @@
 \newcommand*{\homepage}[1]{\sociallink{\homeSymbol}{http://#1}{#1}}
 \newcommand{\socialinfo}[1]{\def\@socialinfo{#1}}
 \newcommand*{\github}[1]{\sociallink{\githubSymbol}{https://www.github.com/#1}{github.com/#1}}           % Github icon + URL
+\newcommand*{\adc}[1]{\sociallink{\githubSymbol}{https://adc.github.trendmicro.com/#1}{adc.github.trendmicro.com/#1}}
 \newcommand*{\email}[1]{\sociallink{\mailSymbol}{mailto:#1}{#1}}
 \newcommand*{\emailO}[1]{\sociallink{\mailSymbolO}{mailto:#1}{#1}}
 \newcommand*\smartphone[1]{\socialtext{\mobileSymbol}{#1}}
