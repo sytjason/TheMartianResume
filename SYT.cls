@@ -14,8 +14,8 @@
 \ProvidesClass{SYT}
 
 % Paper dimensions
-\LoadClass[11pt, a4paper]{article}
-\RequirePackage[left=1in, top=0.6in, right=1in, bottom=0.5in]{geometry}
+\LoadClass[10pt, a4paper]{article}
+\RequirePackage[left=0.7in, top=0.6in, right=0.7in, bottom=0.6in]{geometry}
 
 % Gain functionality from third party packages
 \RequirePackage{fancyhdr}
@@ -95,9 +95,6 @@
   }
 }
 
-
-
-
 % Define styles for text
 \setlength{\parskip}{0.8em}
 \newcommand{\pipe}{\ifhmode\hspace{1em}\fi}
@@ -146,7 +143,6 @@
 % THE LOWER-LEVEL TOP & BOTTOM MATTER
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-% 
 \newcommand*{\makecvheader}{
   \ifundef{\@alternative}{
     \ifundef{\@photodiameter}{
@@ -186,7 +182,6 @@
       }
 }
 
-
 % Makes page footer
 \newif\iffullfooter
 
@@ -195,7 +190,6 @@
 }
 
 \newcommand{\tmrfooter}{
-
 	% Empty header fields
 	\fancyhead{}
 
@@ -211,14 +205,12 @@
 	\fi
 }
 
-
 % Makes recipient section from details & dates letter
 \newcommand{\tmrtitle}{ 
 	\textbf{\@recipientname}\hfill\textit{\today}\\
 	\@recipientaddress \\\\\\
 	\@greeting,
 }
-
 
 % Signs off letter
 \newcommand{\tmrclosing}{
@@ -240,7 +232,7 @@
 \titleformat{\subsection}{\filbreak\small\scshape}{}{0pt}{#1}
 
 % Change spacing around headings
-\titlespacing*{\section}{0pt}{4pt}{0pt}
+\titlespacing*{\section}{0pt}{0pt}{0pt}
 \titlespacing*{\subsection}{0pt}{0pt}{0pt}
 
 % 4-field double row entries
